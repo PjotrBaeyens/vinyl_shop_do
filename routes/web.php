@@ -13,18 +13,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//      return view('welcome');
-//
-// });
-//Route::view('/', 'home');
-//Route::view('contact-us', 'contact');
+ Route::get('/', function () {
+      return view('admin/welcome');
 
-
+ });
+Route::view('/', 'admin/home');
+Route::view('contact-us', 'admin/contact');
 
 Route::prefix('admin') -> group(function(){
 
-    Route::redirect('/', 'records');
+    Route::redirect('/', 'admin/records/index');
     Route::get('records', 'Admin\Recordcontroller@index');
 });
 
