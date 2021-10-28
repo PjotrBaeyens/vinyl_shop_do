@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ mix('css/app.css') }}" />
+    @yield('css_after')
+    @include('shared.icons')
     <title>@yield('title' , 'The Vinyl shop')</title>
 </head>
 <body>
@@ -15,5 +17,6 @@
 {{--  Footer  --}}
 @include('shared.footer')
 <script src="{{ mix('js/app.js')}}"></script>
+@yield('script_after')
 </body>
 </html>
